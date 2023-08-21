@@ -1,0 +1,72 @@
+:root {
+    --text-color: #333333;
+    --blue: #0056B3;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --light-purple: #8857e2c4;
+    --pink: #e83e8c;
+    --red: #A91E2C;
+    --orange: #fd7e14;
+    --yellow: #F0B400;
+    --green: #18634B;
+    --teal: #0056B3;
+    --cyan: #17a2b8;
+    --white: #ECF0F3;
+    --gray: #93a5be;
+    --gray-dark: #525480;
+    --primary: #e6e7ee;
+    --secondary: #2D4CC8;
+    --success: #18634B;
+    --info: #0056B3;
+    --warning: #F0B400;
+    --danger: #A91E2C;
+    --light: #D1D9E6;
+    --dark: #31344b;
+    --default: #262833;
+    --white: #ECF0F3;
+    --gray: #44476A;
+    --neutral: #ECF0F3;
+    --soft: #e6e7ee;
+    --black: #262833;
+    --gray-100: #f3f7fa;
+    --gray-200: #fafbfe;
+    --gray-300: #e6e7ee;
+    --gray-400: #D1D9E6;
+    --gray-500: #b1bcce;
+    --gray-600: #93a5be;
+    --gray-700: #66799e;
+    --gray-800: #525480;
+    --facebook: #3b5999;
+    --dribbble: #ea4c89;
+    --github: #222222;
+    --behance: #0057ff;
+    --twitter: #1da1f2;
+    --slack: #3aaf85;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    background-color: #e6e7ee;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
