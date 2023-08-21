@@ -59,9 +59,42 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
                         <tbody>
                             <tr>
                                 <td>18</td>
-                                <td>$1200000</td>
-                                <td>Quang Quang Quang Quang</td>
-                                <td>Phường Hưng Dũng Phường Hưng Dũng Phường Hưng Dũng Phường Hưng Dũng Phường Hưng Dũng Phường Hưng Dũng</td>
+                                <td>800.000</td>
+                                <td>Trần Lê Minh Quang</td>
+                                <td>Số 7, ngõ 55, Phường Hưng Dũng,Thành phố Vinh, Nghệ An</td>
+                                <td>3</td>
+                                <td>
+                                    <a href="#" class="btnsua">Sửa</a>
+                                    <a href="#" class="btnxoa">Xóa</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>1.400.000</td>
+                                <td>Trần Lê Minh Quang</td>
+                                <td>Số 7, ngõ 55, Phường Hưng Dũng,Thành phố Vinh, Nghệ An</td>
+                                <td>2</td>
+                                <td>
+                                    <a href="#" class="btnsua">Sửa</a>
+                                    <a href="#" class="btnxoa">Xóa</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>1.200.000</td>
+                                <td>Trần Lê Minh Quang</td>
+                                <td>Số 7, ngõ 55, Phường Hưng Dũng,Thành phố Vinh, Nghệ An</td>
+                                <td>3</td>
+                                <td>
+                                    <a href="#" class="btnsua">Sửa</a>
+                                    <a href="#" class="btnxoa">Xóa</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>1.500.000</td>
+                                <td>Lê Văn Phong</td>
+                                <td>Số 38,Trần Phú, Thành Phố Vinh, Nghệ An</td>
                                 <td>3</td>
                                 <td>
                                     <a href="#" class="btnsua">Sửa</a>
@@ -70,9 +103,20 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
                             </tr>
                             <tr>
                                 <td>18</td>
-                                <td>$1200</td>
-                                <td>Quang</td>
-                                <td>Phường Hưng Dũng</td>
+                                <td>1.000.000</td>
+                                <td>Lê Văn Phong</td>
+                                <td>Số 38,Trần Phú, Thành Phố Vinh, Nghệ An</td>
+                                <td>4</td>
+                                <td>
+                                    <a href="#" class="btnsua">Sửa</a>
+                                    <a href="#" class="btnxoa">Xóa</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>08</td>
+                                <td>900.000</td>
+                                <td>Võ Văn Quyết</td>
+                                <td>Số 1, Ngách Văn Đông,Phường Hung Dũng, Nghệ An</td>
                                 <td>3</td>
                                 <td>
                                     <a href="#" class="btnsua">Sửa</a>
@@ -80,10 +124,10 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
                                 </td>
                             </tr>
                             <tr>
-                                <td>18</td>
-                                <td>$1200</td>
-                                <td>Quang</td>
-                                <td>Phường Hưng Dũng</td>
+                                <td>31</td>
+                                <td>900.000</td>
+                                <td>Võ Văn Quyết</td>
+                                <td>Số 1, Ngách Văn Đông,Phường Hung Dũng, Nghệ An</td>
                                 <td>3</td>
                                 <td>
                                     <a href="#" class="btnsua">Sửa</a>
@@ -91,32 +135,10 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
                                 </td>
                             </tr>
                             <tr>
-                                <td>18</td>
-                                <td>$1200</td>
-                                <td>Quang</td>
-                                <td>Phường Hưng Dũng</td>
-                                <td>3</td>
-                                <td>
-                                    <a href="#" class="btnsua">Sửa</a>
-                                    <a href="#" class="btnxoa">Xóa</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>18</td>
-                                <td>$1200</td>
-                                <td>Quang</td>
-                                <td>Phường Hưng Dũng</td>
-                                <td>3</td>
-                                <td>
-                                    <a href="#" class="btnsua">Sửa</a>
-                                    <a href="#" class="btnxoa">Xóa</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>18</td>
-                                <td>$1200</td>
-                                <td>Quang</td>
-                                <td>Phường Hưng Dũng</td>
+                                <td>44</td>
+                                <td>900.000</td>
+                                <td>Võ Văn Quyết</td>
+                                <td>Số 1, Ngách Văn Đông,Phường Hung Dũng, Nghệ An</td>
                                 <td>3</td>
                                 <td>
                                     <a href="#" class="btnsua">Sửa</a>

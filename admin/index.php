@@ -168,27 +168,27 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
                         <table>
                             <tr>
                                 <td width="60px"><div class="imgBx"><img src="../public/uploads/anh1.jpeg" alt=""></div></td>
-                                <td><h4>Cho thuê nhà trọ giá sinh viên <br><span>chủ trọ</span></h4></td>
+                                <td><h4>Mã Phòng: 23 | Phòng Trọ giá rẻ cho sinh viên<br><span>Chủ trọ: Phạm Xuân Long</span></h4></td>
                             </tr>
                             <tr>
-                                <td width="60px"><div class="imgBx"><img src="../public/uploads/anh1.jpeg" alt=""></div></td>
-                                <td><h4>Cho thuê nhà trọ giá sinh viên <br><span>chủ trọ</span></h4></td>
+                                <td width="60px"><div class="imgBx"><img src="../public/uploads/anh2.jpg" alt=""></div></td>
+                                <td><h4>Mã Phòng: 32 | Phòng trọ khép kín gần Đại Học Sư Phạm Kỹ Thuật Vinh<br><span>Chủ trọ: Phạm Xuân Long</span></h4></td>
                             </tr>
                             <tr>
-                                <td width="60px"><div class="imgBx"><img src="../public/uploads/anh1.jpeg" alt=""></div></td>
-                                <td><h4>Cho thuê nhà trọ giá sinh viên <br><span>chủ trọ</span></h4></td>
+                                <td width="60px"><div class="imgBx"><img src="../public/uploads/anh3.jpg" alt=""></div></td>
+                                <td><h4>Mã Phòng: 21 | Phòng trọ sạch sẽ thoáng mát <br><span>Chủ trọ: Lê Văn Phong</span></h4></td>
                             </tr>
                             <tr>
-                                <td width="60px"><div class="imgBx"><img src="../public/uploads/anh1.jpeg" alt=""></div></td>
-                                <td><h4>Cho thuê nhà trọ giá sinh viên <br><span>chủ trọ</span></h4></td>
+                                <td width="60px"><div class="imgBx"><img src="../public/uploads/phongtro1.png" alt=""></div></td>
+                                <td><h4>Mã Phòng: 33 | Cho thuê phòng trọ gần chợ<br><span>Chủ trọ: Lê Văn Phong</span></h4></td>
                             </tr>
                             <tr>
-                                <td width="60px"><div class="imgBx"><img src="../public/uploads/anh1.jpeg" alt=""></div></td>
-                                <td><h4>Cho thuê nhà trọ giá sinh viên <br><span>chủ trọ</span></h4></td>
+                                <td width="60px"><div class="imgBx"><img src="../public/uploads/phongtro2.jpg" alt=""></div></td>
+                                <td><h4>Mã Phòng: 43 | Cho thuê phòng Sạch sẽ<br><span>Chủ trọ: Võ Văn quyết</span></h4></td>
                             </tr>
                             <tr>
-                                <td width="60px"><div class="imgBx"><img src="../public/uploads/anh1.jpeg" alt=""></div></td>
-                                <td><h4>Cho thuê nhà trọ giá sinh viên <br><span>chủ trọ</span></h4></td>
+                                <td width="60px"><div class="imgBx"><img src="../public/uploads/phongtro3.jpg" alt=""></div></td>
+                                <td><h4>Mã Phòng: 12 | phòng sạch sẽ thoáng mát<br><span>Chủ trọ: Trần Lê Minh Quang</span></h4></td>
                             </tr>
                         </table>
                     </div>
