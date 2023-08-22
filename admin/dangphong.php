@@ -182,6 +182,7 @@
                             //         $result = mysqli_insert_id($conn);
                                     // }
                             // }
+                            
                             if($rs){
                                 echo'<script>alert("Đăng bài thành công");</script>';
                             }

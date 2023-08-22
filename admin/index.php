@@ -50,7 +50,7 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
                 <div class="cardBox">
                     <div class="cardAdmin">
                         <div>
-                            <div class="numbers">1,054</div>
+                            <div class="numbers">6.511.142 VNĐ</div>
                             <div class="cardName">Daily revenue</div>
                         </div>
                         <div class="iconBx">
@@ -59,7 +59,7 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
                     </div>
                     <div class="cardAdmin">
                         <div>
-                            <div class="numbers">1,054</div>
+                            <div class="numbers">120.325.124 VNĐ</div>
                             <div class="cardName">monthly revenue</div>
                         </div>
                         <div class="iconBx">
@@ -68,7 +68,7 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
                     </div>
                     <div class="cardAdmin">
                         <div>
-                            <div class="numbers">1,054</div>
+                            <div class="numbers">120</div>
                             <div class="cardName">room available</div>
                         </div>
                         <div class="iconBx">
@@ -97,7 +97,7 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
 
                     <div class="dailyOrder">
                         <div class="cardHeader">
-                            <h2>Tăng trưởng quỹ</h2>
+                            <h2>Lợi nhuận mảng</h2>
                         </div>
                         <div id="chart-tangtruongquy"></div>
                     </div>
@@ -216,6 +216,14 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
         </div>
     </div>
     <?php } ?>
+
+
+
+    <!-- Script chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.41.1/apexcharts.min.js" 
+    integrity="sha512-Gpg0M5UOTFSHGglemXUOUzL1LyO8MT0fxmEAjGN8jNlY6oSOsLerF1/vuXrqJXKyV5QIay12trwDDhmRJHZisA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script src="../assets/js/app.js"></script>
 </body>
 </html>

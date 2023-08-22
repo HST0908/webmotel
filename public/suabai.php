@@ -2,14 +2,13 @@
     session_start();
     include '../connect.php';
     $user = (isset($_SESSION['user']))?$_SESSION['user']:''; 
-    $id = $_REQUEST['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sửa bài đăng</title>
+    <title>Đăng phòng</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -27,6 +26,7 @@
                 <nav class="header__navbar">
                     <a class="header__navbar-logo" href="../index.php"><img src="../assets/img/Motel.vn-removebg-preview.png" alt="motel.vn"></a>
                     <ul class="header__navbar-user">
+                    
                     <?php if(!empty($user)){
                         if($user['permission']=='1' || $user['permission']=='0' ){
                         echo'
@@ -46,41 +46,29 @@
             <div class="row">
                 <div class="col l-12 m-12 c-12">
                     <div class="box__container">
-                        <?php 
+                        <?php
                             $id = $_REQUEST['id'];
-                            $sql = "SELECT * FROM phongtro WHERE ma_phong = $id";
-                            $result = mysqli_query($conn,$sql);
+                            $sqlSelect = "SELECT * FROM phongtro WHERE ma_phong = $id";
+                            $result = mysqli_query($conn,$sqlSelect);
                             while($row = mysqli_fetch_assoc($result)){
-                            ?>
+                        ?>
                         <form action="" method="post" enctype="multipart/form-data">
                             <div class="box__container-top">
                                 <a href="../index.php" class="back_datphong"><i class="fa-solid fa-arrow-left"></i>Trở lại</a>
                                 <div class="box__container--header">
-                                    <h2 class="header__title">Sửa thông tin phòng</h2>
+                                    <h2 class="header__title">Đăng phòng cho thuê mới</h2>
                                 </div>
                             </div>
                             <div class="box__container-content">
                                 <div class="content__list">
                                     <input type="number" name="id_user" class="content__list--input" value="<?=$user['idcard'];?>" placeholder="Mã chủ  trọ" readonly></input>
-                                    <input type="text" name="title" class="content__list--input" placeholder="Tiêu đề bài đăng" value="<?=$row['title']?>"></input>
+                                    <input type="text" name="title" class="content__list--input" value="<?=$row['title']?>" placeholder="Tiêu đề bài đăng"></input>
                                 </div>
                                 <div class="content__list">
-                                    <?php
-                                    if($row['kieu_phong'] == "Nhà cấp 4")
-                                    echo '
-                                    <select name="kieunha" id="" class="content__list--input">
-                                        <option value="Nhà cấp 4" slected>Nhà cấp 4</option>
-                                        <option value="Nhà trọ">Nhà trọ</option>
-                                    </select>
-                                    ';
-                                    elseif($row['kieu_phong'] == "Nhà cấp 4")
-                                    echo '
                                     <select name="kieunha" id="" class="content__list--input">
                                         <option value="Nhà cấp 4">Nhà cấp 4</option>
-                                        <option value="Nhà trọ" slected>Nhà trọ</option>
+                                        <option value="Nhà trọ">Nhà trọ</option>
                                     </select>
-                                    ';
-                                    ?>
                                     <select name="loaiphong" id="" class="content__list--input">
                                         <option value="Khép kín">Khép kín</option>
                                         <option value="Không khép kín">Không khép kín</option>
@@ -88,34 +76,29 @@
                                 </div>
                                 
                                 <div class="content__list">
-                                    <!-- <select class="content__list--input" name="thanhpho" id="">
-                                        <option value="Thành phố Vinh">Thành phố Vinh</option>
-                                        <option value="Thành phố Hà Tĩnh">Thành phố Hà Tĩnh</option>
-                                        <option value="Hà Nội">Hà Nội</option>
-                                    </select> -->
                                     <?php
-                                    switch($row['huyen']){
-                                        case "Thành phố Vinh":
+                                        if($row['huyen']  == "Thành phố Vinh"){
+                                            
                                             echo'<select class="content__list--input" name="thanhpho" id="">
-                                                    <option value="Thành phố Vinh" selected>Thành phố Vinh</option>
-                                                    <option value="Thành phố Hà Tĩnh">Thành phố Hà Tĩnh</option>
-                                                    <option value="Hà Nội">Hà Nội</option>
-                                                </select>';
-
-                                        case "Thành phố Hà Tĩnh":
+                                                <option value="Thành phố Vinh" selected>Thành phố Vinh</option>
+                                                <option value="Thành phố Hà Tĩnh">Thành phố Hà Tĩnh</option>
+                                                <option value="Hà Nội">Hà Nội</option>
+                                            </select>';
+                                        }elseif($row['huyen']  == "Thành phố Hà Tĩnh") {
+                                            
                                             echo'<select class="content__list--input" name="thanhpho" id="">
-                                                    <option value="Thành phố Vinh">Thành phố Vinh</option>
-                                                    <option value="Thành phố Hà Tĩnh" selected>Thành phố Hà Tĩnh</option>
-                                                    <option value="Hà Nội">Hà Nội</option>
-                                                </select>';
-
-                                        case "Hà Nội":
+                                                <option value="Thành phố Vinh">Thành phố Vinh</option>
+                                                <option value="Thành phố Hà Tĩnh" selected>Thành phố Hà Tĩnh</option>
+                                                <option value="Hà Nội">Hà Nội</option>
+                                            </select>';
+                                        }elseif($row['huyen']  == "Hà Nội") {
+                                            
                                             echo'<select class="content__list--input" name="thanhpho" id="">
-                                                    <option value="Thành phố Vinh">Thành phố Vinh</option>
-                                                    <option value="Thành phố Hà Tĩnh">Thành phố Hà Tĩnh</option>
-                                                    <option value="Hà Nội" selected>Hà Nội</option>
-                                                </select>';
-                                    } 
+                                                <option value="Thành phố Vinh">Thành phố Vinh</option>
+                                                <option value="Thành phố Hà Tĩnh">Thành phố Hà Tĩnh</option>
+                                                <option value="Hà Nội" selected>Hà Nội</option>
+                                            </select>';
+                                        }
                                     ?>
                                     <select class="content__list--input" name="phuong" id="">
                                         <option value="Phường Đông Vĩnh">Phường Đông Vĩnh</option>
@@ -144,35 +127,40 @@
                                 </div>
 
                                 <div class="content__list">
-                                    <input type="text" name="sonha" class="content__list--input" value="<?= $row['sonha']?>" placeholder="Số nhà" required></input>
-                                    <input type="text" name="duong" class="content__list--input" value="<?= $row['duong'] ?>" placeholder="Tên đường" required></input>
-                                </div>
-
-                                <div class="content__list">
+                                    <input type="text" name="sonha" class="content__list--input" value="<?=$row['sonha']?>" placeholder="Số nhà" required></input>
+                                    <input type="text" name="duong" class="content__list--input" value="<?=$row['duong']?>" placeholder="" required></input>
                                     <select class="content__list--input" name="slnguoi" id="">
                                         <option value="2">Từ dưới 2 người</option>
                                         <option value="3">Từ trên 2 người</option>
                                     </select>
-                                    
-                                    <input type="number" name="dientich" class="content__list--input" value="<?= $row['dientich'];?>" placeholder="Diện tích" required></input>
+                                </div>
 
-                                    <input type="number" name="gia" class="content__list--input" value="<?=$row['gia'] ?>" placeholder="Giá phòng/tháng" required></input>
+                                <div class="content__list">
+                                    <select class="content__list--input" name="trangthai" id="">
+                                        <option value="0">Còn phòng</option>
+                                        <option value="1">Hết phòng</option>
+                                    </select>
+                                    
+                                    <input type="number" name="dientich" value="<?=$row['dientich']?>" class="content__list--input" placeholder="Diện tích" required></input>
+
+                                    <input type="number" name="gia" value="<?=$row['gia']?>" class="content__list--input" placeholder="Giá phòng/tháng" required></input>
                                 </div>
                                 
                                 <div class="content__list">
                                     <h5>Ảnh phòng</h5>
-                                    <input type="file" name="image[]" class="content__list--input" title="Có thể chọn nhiều ảnh" value=""></input>
+                                    <input type="file" name="image" class="content__list--input" value=""></input>
+                                    <img src="../public/uploads/<?=$row['avatar']?>" alt="" width="150px" height="150px">
                                 </div>
 
                                 <!-- <div class="content__list">
                                     <h5>Ảnh phòng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
-                                    <input type="file" name="images[]" class="content__list--input" title="Có thể chọn nhiều ảnh" value="" multiple></input>
+                                    <input type="file" name="images[]" class="content__list--input" title="Chọn tối đa 3 ảnh" value="" multiple></input>
                                 </div> -->
                                 <div class="content__list">
-                                    <textarea type="text" name="mota" class="content__list--input" value="" placeholder="Nhập mô tả phòng..."><?= $row['mota']?></textarea>
+                                    <textarea type="text" name="mota" class="content__list--input" value="" placeholder="Nhập mô tả phòng..."><?=$row['mota']?></textarea>
                                 </div>
                                 <div class="content__list">
-                                    <button type="submit" name="submit" class="btn btn__dangbai">Sửa bài</button>
+                                    <button type="submit" name="submit" class="btn btn__dangbai">Đăng Phòng</button>
                                 </div>
                             </div>
                         </form>
@@ -197,21 +185,22 @@
                             move_uploaded_file($file['tmp_name'],'../public/uploads/'.$file_name);
 
                             
-                            $files = $_FILES['images'];
-                            $file_names = $files['name'];
-                            foreach ($file_names as $key => $value){
-                                move_uploaded_file($files['tmp_name'][$key],'../public/uploads/'.$value);
-                            }
+                            // $files = $_FILES['images'];
+                            // $file_names = $files['name'];
+                            // foreach ($file_names as $key => $value){
+                            //     move_uploaded_file($files['tmp_name'][$key],'../public/uploads/'.$value);
+                            // }
 
                             $sql = "UPDATE `phongtro` SET `title` = '$tieude', `loai_phong` = '$loaiphong', `kieu_phong` = '$kieunha', `sonha` = '$sonha', `duong` = '$duong', `phuong` = '$phuong', `huyen` = '$thanhpho', `tinh` = '$tinh', `dientich` = '$dientich', `so_nguoi` = '$slnguoi', `gia` = '$gia', `avatar` = '$file_name', `mota` = '$mota', `tinhtrang` = '$tinhtrang' WHERE `phongtro`.`ma_phong` = '$id'";
-                            
-                            $rs = mysqli_query($conn,$sql);
-                            $id_phongtro = mysqli_insert_id($conn);
 
                             
-                            foreach ($file_names as $key => $value){
-                                mysqli_query($conn,"INSERT INTO image(maphong,image) VALUE('$id_phongtro','$value')");
-                            }
+                            $rs = mysqli_query($conn,$sql);
+                            // $id_phongtro = mysqli_insert_id($conn);
+
+                            
+                            // foreach ($file_names as $key => $value){
+                            //     mysqli_query($conn,"INSERT INTO image(maphong,image) VALUE('$id_phongtro','$value')");
+                            // }
 
                             // $imageCount = count($_FILES['anhphong']['name']);
                             // for($i = 0; $i < $imageCount; $i++){
@@ -223,6 +212,7 @@
                             //         $result = mysqli_insert_id($conn);
                                     // }
                             // }
+
                             if($rs){
                                 echo'<script>alert("Đăng bài thành công");</script>';
                             }

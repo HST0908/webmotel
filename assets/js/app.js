@@ -212,3 +212,63 @@ var options = {
 
   var chart = new ApexCharts(document.querySelector("#chart-tangtruong"), options);
   chart.render();
+
+  // =============================================================================
+
+  
+  var options = {
+  chart: {
+    height: 380,
+    type: "area"
+  },
+  dataLabels: {
+    enabled: false
+  },
+  series: [
+    {
+      name: "Series 1",
+      data: [5, 22, 38, 45, 19, 23, 45]
+    }
+  ],
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 1,
+      opacityFrom: 0.7,
+      opacityTo: 0.9,
+      stops: [0, 90, 100]
+    }
+  },
+  xaxis: {
+    categories: [
+      "01 Jan",
+      "02 Jan",
+      "03 Jan",
+      "04 Jan",
+      "05 Jan",
+      "06 Jan",
+      "07 Jan"
+    ]
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#chart-dtthang"), options);
+
+chart.render();
+
+
+// =====================================
+options = {
+  chart: {
+    type: 'donut',
+    size: '65%'
+  },
+  series: [44, 55, 41, 17, 15],
+  chartOptions: {
+    labels: ['Apple', 'Mango', 'Orange', 'Watermelon']
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#chart-tangtruongquy"), options);
+
+chart.render();
