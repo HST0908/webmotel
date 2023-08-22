@@ -1105,3 +1105,24 @@
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
 } */
 
+.content__list--loaitk {
+    font-size: 2em;
+    padding: 15px;
+    color: var(--text-color);
+}
+
+.content__list--radio {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.radio_select {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.radio_select label {
+    margin-right: 20px;
+}

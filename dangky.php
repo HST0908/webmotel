@@ -1,3 +1,7 @@
+<?php 
+    session_start(); 
+    include 'connect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,8 +48,85 @@
             </div>
         </header>
 
+        <div class="grid lager">
+            <div class="row">
+                <div class="col l-12 m-12 c-12">
+                    <div class="box__container">
+                        <form action="" method="post">
+                            <div class="box__container-top">
+                                <a href="./index.php" class="back_datphong"><i class="fa-solid fa-arrow-left"></i>Trở lại</a>
+                                <div class="box__container--header">
+                                    <h2 class="header__title">Đăng Ký</h2>
+                                </div>
+                            </div>
+                            
+                            <div class="box__container-content">
+                                <div class="content__list">
+                                    <input type="number" name="id_user" class="content__list--input" value="" placeholder="Số căn cước công dân" required>
+                                    <input type="text" name="ten" class="content__list--input" value="" placeholder="Họ và tên" required>
+                                </div>
+                                <div class="content__list">
+                                    <input type="number" name="sdt" class="content__list--input" placeholder="Số điện thoại" value="" required>
+                                </div>
+                                <div class="content__list">
+                                    <input type="password" name="pass" class="content__list--input" id="pass" placeholder="Mật khẩu" value="" required>
+                                    <input type="password" name="repass" class="content__list--input" id="repass" placeholder="Nhập lại khẩu" value="" required>
+                                </div>
+                                <div class="content__list">
+                                    <input type="text" id="register_boss1" name="sonha" class="content__list--input" placeholder="Số nhà" value="" style="display: none;">
+                                    <input type="text" id="register_boss2" name="duong" class="content__list--input" placeholder="Đường" value="" style="display: none;">
+                                    <input type="text" id="register_boss3" name="phuong" class="content__list--input" placeholder="Phường" value="" style="display: none;">
+                                </div>
+                                <div class="content__list">
+                                    <input type="text" id="register_boss4" name="huyen" class="content__list--input" placeholder="Huyện/Thành Phố" value="" style="display: none;">
+                                    <input type="text" id="register_boss5" name="tinh" class="content__list--input" placeholder="Tỉnh" value="" style="display: none;">
+                                </div>
+                                <div class="content__list--loaitk">
+                                    <h3>Loại tài khoản</h3>
+                                    <div class="radio_select">
+                                        <input type="radio" class="content__list--radio" name="myRadio" value="1" onchange="myFunction()" checked><label>Tìm kiếm</label>
+                                        <input type="radio" class="content__list--radio" name="myRadio" value="2" onchange="myFunction()"><label>Chủ trọ</label>
+                                    </div>
+                                </div>
+                                <div class="content__list">
+                                    <button type="submit" name="submit" class="btn btn__dangbai">Đăng ký</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <?php
+            if(isset($_POST['submit'])){
+                
+                $taikhoan = $_POST['id_user'];
+                $ten = $_POST['ten'];
+                $sdt = $_POST['sdt'];
+                $pass = $_POST['pass'];
+                $repass = $_POST['repass'];
+                $sonha = $_POST['sonha'];
+                $duong = $_POST['duong'];
+                $phuong = $_POST['duong'];
+                $huyen = $_POST['huyen'];
+                $tinh = $_POST['tinh'];
 
+                if($pass != $repass){
+                    echo'<script>alert("Mật khẩu không trùng khớp")</script>';
+                }else{
 
+                    $sql = "INSERT INTO `user` (`idcard`, `password`, `ten`, `sonha`, `duong`, `phuong`, `huyen`, `tinh`, `phone`, `pay`, `status`, `permission`) 
+                    VALUES ('$taikhoan', MD5('$pass'), '$ten', '$sonha', '$duong', '$phuong', '$huyen', '$tinh', '$sdt', '', '0', '2')";
+                    $rs = mysqli_query($conn,$sql);
+                    if($rs){
+                        
+                        echo'<script>alert("Đăng Ký tài khoản thành công")</script>';
+                        echo '<script>window.location.href = "index.php"</script>';
+
+                    }
+                }
+            }
+            ?>
 
             <!-- modal -->
         <div class="modal" id="modal">

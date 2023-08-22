@@ -45,6 +45,47 @@ toggle.onclick = function() {
     main.classList.toggle('active');
 }
 
+
+// select type account
+
+function myFunction() {
+  var radios = document.getElementsByName("myRadio");
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      // Nếu radio button được chọn
+      // console.log(radios[i].value);
+      if(radios[i].value == 1){
+        // console.log("radio1");
+        document.getElementById("register_boss1").style.display = "none";
+        document.getElementById("register_boss2").style.display = "none";
+        document.getElementById("register_boss3").style.display = "none";
+        document.getElementById("register_boss4").style.display = "none";
+        document.getElementById("register_boss5").style.display = "none";
+
+        document.getElementById("register_boss1").setAttribute("required", false);
+        document.getElementById("register_boss2").setAttribute("required", false);
+        document.getElementById("register_boss3").setAttribute("required", false);
+        document.getElementById("register_boss4").setAttribute("required", false);
+        document.getElementById("register_boss5").setAttribute("required", false);
+      }else{
+        // console.log("radio2");
+        document.getElementById("register_boss1").setAttribute("required", true);
+        document.getElementById("register_boss2").setAttribute("required", true);
+        document.getElementById("register_boss3").setAttribute("required", true);
+        document.getElementById("register_boss4").setAttribute("required", true);
+        document.getElementById("register_boss5").setAttribute("required", true);
+
+        document.getElementById("register_boss1").style.display = "block";
+        document.getElementById("register_boss2").style.display = "block";
+        document.getElementById("register_boss3").style.display = "block";
+        document.getElementById("register_boss4").style.display = "block";
+        document.getElementById("register_boss5").style.display = "block";
+      }
+    }
+  }
+}
+
+
 // ------------- Chart-------------------
 
 var options = {
@@ -153,7 +194,7 @@ var options = {
     height: 350
   },
   stroke: {
-    curve: 'stepline',
+    curve: 'smooth',
   },
   dataLabels: {
     enabled: false

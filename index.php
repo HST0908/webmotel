@@ -208,7 +208,7 @@
                             <form action="" method="post" class="auth-form__form">
                                 <div class="auth-form__group">
                                     <div class="auth-form__group--taikhoan">
-                                        <input type="text" name="taikhoan" class="auth-form__input" #id="input_taikhoan" placeholder=" " required>
+                                        <input type="text" name="taikhoan" class="auth-form__input" #id="input_taikhoan" placeholder=" " autocomplete="off" required>
                                         <label for="taikhoan" class="from-label_taikhoan">Tài khoản</label>
                                     </div>
                                     

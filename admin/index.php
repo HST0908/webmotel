@@ -86,6 +86,23 @@ $user = (isset($_SESSION['user']))?$_SESSION['user']:'';
                     </div>
                 </div>
 
+                <!-- Charts -->
+                <div class="details detail1fs1">
+                    <div class="dailyOrder">
+                        <div class="cardHeader">
+                            <h2>doanh thu tháng</h2>
+                        </div>
+                        <div id="chart-dtthang"></div>
+                    </div>
+
+                    <div class="dailyOrder">
+                        <div class="cardHeader">
+                            <h2>Tăng trưởng quỹ</h2>
+                        </div>
+                        <div id="chart-tangtruongquy"></div>
+                    </div>
+                </div>
+
                 <!-- Order Data list -->
                 <div class="details">
                     <div class="dailyOrder">
