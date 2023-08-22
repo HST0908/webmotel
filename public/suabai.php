@@ -144,8 +144,8 @@
                                 </div>
 
                                 <div class="content__list">
-                                    <input type="text" name="sonha" class="content__list--input" value="" placeholder="Số nhà" required></input>
-                                    <input type="text" name="duong" class="content__list--input" placeholder="Tên đường" required></input>
+                                    <input type="text" name="sonha" class="content__list--input" value="<?= $row['sonha']?>" placeholder="Số nhà" required></input>
+                                    <input type="text" name="duong" class="content__list--input" value="<?= $row['duong'] ?>" placeholder="Tên đường" required></input>
                                 </div>
 
                                 <div class="content__list">
@@ -154,9 +154,9 @@
                                         <option value="3">Từ trên 2 người</option>
                                     </select>
                                     
-                                    <input type="number" name="dientich" class="content__list--input" placeholder="Diện tích" required></input>
+                                    <input type="number" name="dientich" class="content__list--input" value="<?= $row['dientich'];?>" placeholder="Diện tích" required></input>
 
-                                    <input type="number" name="gia" class="content__list--input" placeholder="Giá phòng/tháng" required></input>
+                                    <input type="number" name="gia" class="content__list--input" value="<?=$row['gia'] ?>" placeholder="Giá phòng/tháng" required></input>
                                 </div>
                                 
                                 <div class="content__list">
@@ -169,7 +169,7 @@
                                     <input type="file" name="images[]" class="content__list--input" title="Có thể chọn nhiều ảnh" value="" multiple></input>
                                 </div> -->
                                 <div class="content__list">
-                                    <textarea type="text" name="mota" class="content__list--input" value="" placeholder="Nhập mô tả phòng..."></textarea>
+                                    <textarea type="text" name="mota" class="content__list--input" value="" placeholder="Nhập mô tả phòng..."><?= $row['mota']?></textarea>
                                 </div>
                                 <div class="content__list">
                                     <button type="submit" name="submit" class="btn btn__dangbai">Sửa bài</button>
