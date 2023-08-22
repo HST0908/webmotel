@@ -202,7 +202,7 @@
                         <div class="auth-form__container">
                             <div class="auth-form__header">
                                 <h3 class="auth-form__heading">Đăng Nhập</h3>
-                                <a href="#" class="auth-form__switch-btn">Đăng Ký</a>
+                                <a href="./dangky.php" class="auth-form__switch-btn">Đăng Ký</a>
                             </div>
     
                             <form action="" method="post" class="auth-form__form">
